@@ -9,23 +9,23 @@ package com.curso.pairprogramming;
  * @author mjimen19
  */
 public class Box {
-    private char box;
+    private char boxCharacter;
 
-    public Box(char box) {
-        this.box = box;
+    public Box(char boxCharacter) {
+        this.boxCharacter = boxCharacter;
     }
     
     public char getBox() {
-        return box;
+        return boxCharacter;
     }
     
     public void setBox(char character){
-        box = character;
+        boxCharacter = character;
     }
     
     public boolean isOccupied(){
         boolean isOcu = true;
-        if(box == ' ' || box == 'S'){
+        if(boxCharacter == ' ' || boxCharacter == 'S'){
             isOcu = false;
         }
         
@@ -33,20 +33,10 @@ public class Box {
     }
     
     public boolean isFinish(){
-        boolean isFin = false;
-        if(box == 'S'){
-            isFin = true;
-        }
-        
-        return isFin;
+        return boxCharacter == 'S';
     }
     
     public boolean isStart(){
-        boolean isStart = false;
-        if(box == 'E'){
-            isStart = true;
-        }
-        
-        return isStart;
+        return boxCharacter == 'E';
     }
 }
